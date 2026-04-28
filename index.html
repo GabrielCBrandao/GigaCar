@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Giga Shop</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <img class="logo" src="./assets/logo.png"></img>
+
+
+        <nav class="menuHeader">
+            <ul class="menu">
+                <li><a href="#" class="menu-link">Início</a></li>
+                <li><a href="#produtos" class="menu-link">Produtos</a></li>
+                <li><a href="#" class="menu-link">Sobre Nós</a></li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=5521974089973" target="_blank"
+                        class="menu-link">Contato</a>
+                </li>
+                <!-- BOTÃO CARRINHO -->
+                <button id="abrir-carrinho" class="cart-icon">🛒</button>
+
+                <!-- MODAL -->
+                <div id="modal-carrinho" class="modal">
+
+                    <div class="modal-content">
+
+                        <span id="fechar-modal">&times;</span>
+
+                        <h2>Seu Carrinho</h2>
+
+                        <ul id="lista-carrinho"></ul>
+
+                        <p id="total">Total: R$ 0</p>
+
+                        <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+
+                    </div>
+
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+
+        <!-- VIDEO -->
+        <video autoplay muted loop id="bg-video">
+            <source src="./assets/video.mp4" type="video/mp4">
+        </video>
+
+        <!-- OVERLAY -->
+        <div class="overlay"></div>
+
+        <!-- CONTEÚDO -->
+        <div class="hero-content">
+            <h2>Bem-vindo(a) à Giga Shop!</h2>
+
+            <p class="gigaP">
+                A GigaShop é mais do que uma empresa de venda de carros: é o lugar onde tecnologia, confiança e
+                qualidade se encontram para transformar a experiência de compra automotiva.
+            </p>
+
+            <a href="#produtos" class="btn">Confira nossos produtos</a>
+        </div>
+
+    </main>
+    <section id="produtos" class="produtos">
+
+        <h2>Nossos Carros</h2>
+
+        <div class="produtos-container">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <img src="./assets/carro1.webp" alt="Carro 1">
+                <h3>BMW Série 3</h3>
+                <p>O BMW Série 3 é um sedã executivo compacto premium, referência em esportividade desde 1975.</p>
+                <span class="preco" data-preco="180000">R$ 180.000</span>
+                <button class="btn-comprar">Adicionar ao carrinho</button>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <img src="./assets/carro2.jpg" alt="Carro 2">
+                <h3>Audi A4</h3>
+                <p>O Audi A4 é um sedã executivo médio de luxo, conhecido por seu design sofisticado, tecnologia avançada e conforto. </p>
+                <span class="preco" data-preco="200000">R$ 200.000</span>
+                <button class="btn-comprar">Adicionar ao carrinho</button>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <img src="./assets/carro3.webp" alt="Carro 3">
+                <h3>Mercedes C180</h3>
+                <p>A Mercedes-Benz C180 é um sedã de luxo premium, famoso pelo conforto e sofisticação.</p>
+                <span class="preco" data-preco="220000">R$ 220.000</span>
+                <button class="btn-comprar">Adicionar ao carrinho</button>
+            </div>
+            <div class="card">
+                <img src="./assets/carro4.jpeg" alt="Carro 4">
+                <h3>Ferrari</h3>
+                <p>A Ferrari F50 é um dos supercarros mais icônicos e exclusivos da marca italiana, lançada em 1995 para comemorar os 50 anos da empresa (embora tenha chegado um pouco antes). Produzida em apenas 349 unidades, ela foi concebida como um verdadeiro "carro de Fórmula 1 para a estrada".</p>
+                <span class="preco" data-preco="35000000">R$ 35.000.000</span>
+                <button class="btn-comprar">Adicionar ao carrinho</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+<script src="scripts.js"></script>
+
+</html>
